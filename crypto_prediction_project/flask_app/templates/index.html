@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATH-CryptoNet Predictor</title>
+</head>
+<body>
+
+<h2>Crypto Price Prediction</h2>
+
+<form method="POST">
+    <input name="f1" placeholder="Close" required><br><br>
+    <input name="f2" placeholder="RSI" required><br><br>
+    <input name="f3" placeholder="MACD" required><br><br>
+    <input name="f4" placeholder="Volatility" required><br><br>
+    <input name="f5" placeholder="Sentiment" required><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+{% if prediction %}
+<h3>Prediction: {{ prediction }}</h3>
+{% endif %}
+
+{% if trend %}
+<h3>Trend: {{ trend }}</h3>
+{% endif %}
+
+</body>
+</html>
